@@ -1,0 +1,30 @@
+pragma solidity ^0.4.21 <0.6.12;
+    contract ReportCard {
+
+    string public name;
+    unit public rollNo;
+    unit public batch;
+    unit public english;
+    units public maths;
+    unit public generalscience;
+    unit public biology;
+    unit public status;
+
+
+    function ReportCards(string _Name, unit _RollNo, unit _Batch,unit _English,unit _maths,unit _generalscience,unit _biology,unit _status) public
+    {
+        name = _Name;
+        rollNo = _Rollno;
+        batch = _Batch;
+        english = _English;
+        maths = _Maths;
+        generalscience = _Generalscience;
+        biology = _Biology;
+        status = _Status;
+
+    }
+
+    function getReportCardDetails() public view returns(string,unit,unit,unit,unit,unit,unit,string){
+        return (name, rollNo, batch, english, maths, generalscience, biology, status)
+    }
+    
